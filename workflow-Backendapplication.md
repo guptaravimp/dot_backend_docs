@@ -17,7 +17,7 @@ cd backend-project
 ```
 npm init -y
 ```
-# 3- Installing expree
+# 3- Installing express
 ```
  npm install express
 ```
@@ -38,7 +38,7 @@ npm install nodemon
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
-# Now write this code in server.js or index.js
+# 7 Now write this code in server.js or index.js
 ```
 const express = require('express')
 const app = express()
@@ -54,9 +54,10 @@ app.listen(port, () => {
 ```
 # 5 Now run this backend in Node.js
 ```
- // node server.js
 npm run dev
 ```
 ## see the port ......
-# Go to browser search localhost:3000
+## Go to browser search localhost:300
+# Now lets create all the folder that is routes, controller, .env, and model folder to complete the backend setup
+
 
