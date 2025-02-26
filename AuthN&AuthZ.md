@@ -59,3 +59,43 @@ npm run dev
 #### Controller-> all business logic of every specific routes
 #### config->database connection file
 #### models-> to create the model of our database or say structure in which format our data will store in db
+## 1 first create a routes folder 
+#### user.js
+##### and write all the code and router which is needed in our project ad our project is login and signup lets write the routes of login and signup as both are post request because we have to take input from user and perform task so write the codeof routes file 
+#### for this we need to import express.Router()
+```
+const express=require("express");
+const { login, signup } = require("../controllers/Auth");
+const router=express.Router();
+
+router.post("/login",login);
+router.post("/signup",signup);
+module.exports=router;
+```
+### 2 Now lets mout this in index.js 
+#### index.js
+##### as main file is index.js from where our backend is call so we have to mount this in index.js with base url api
+```
+const express = require('express');
+const app = express()
+
+require('dotenv').config();
+const PORT = process.env.PORT;
+
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`)
+})
+
+// middleware to parse the req.body json data
+app.use(express.json());
+
+// mounting our routes folder 
+const user=require("./routes/user")
+app.use('/api/v1',user)
+
+
+// default routes 
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+```
