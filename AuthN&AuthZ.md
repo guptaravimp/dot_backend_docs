@@ -51,4 +51,11 @@ app.listen(port, () => {
 npm run dev
 ```
 ## see the port ......
-## Go to browser search localhost:300
+## Go to browser search localhost:3000 
+
+# Step-2> Create all Folder
+## routes,Controller, config, models
+#### routes->creating all the routes
+#### Controller-> all business logic of every specific routes
+#### config->database connection file
+#### models-> to create the model of our database or say structure in which format our data will store in db
