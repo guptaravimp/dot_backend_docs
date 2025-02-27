@@ -95,6 +95,8 @@ exports.login=async(req,res)=>{
 
 ![Image](https://github.com/user-attachments/assets/2e46a393-e900-4868-8ff5-7ef7de6358bb)
 
+## see the code till now
+
 ```
 
 if(await bcrypt.compare(password,user.password)){
