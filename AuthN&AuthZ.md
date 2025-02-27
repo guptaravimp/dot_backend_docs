@@ -353,7 +353,9 @@ module.exports=router;
 
 ## 4.2 see the login and signup business logic here 
 ### Signup-> 
-///// redme file of signup
+
+https://github.com/guptaravimp/dot_backend_docs/blob/main/signup_logic.md
+
 ### Login-> 
 /// readme file for login
 
