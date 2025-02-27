@@ -82,6 +82,9 @@ exports.signup=async(req,res)=>{
 ```
 ## if not exist hashed the password using the bcrypt library 
 # step4-> use Bcrypt library to hashed the password so 
+
+![Image](https://github.com/user-attachments/assets/e2e89837-5d12-4b7f-9728-bb2eee3f1106)
+
 ## first install bcrypt library 
 ```
 npm install bcrypt
