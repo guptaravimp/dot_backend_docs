@@ -357,14 +357,24 @@ module.exports=router;
 https://github.com/guptaravimp/dot_backend_docs/blob/main/signup_logic.md
 
 ### Login-> 
-/// readme file for login
+
+https://github.com/guptaravimp/dot_backend_docs/blob/main/login_logic.md
 
 
 ## 4.3 as now we have  a better understanding of bcrypt libraries, jwt token, and cookies 
-//// See the docs notes 
-bcrypt libarary->
-jwt token->
-cookies->
+## Bcrypt Libraray
+![Image](https://github.com/user-attachments/assets/e2e89837-5d12-4b7f-9728-bb2eee3f1106) 
+
+## jwt token->
+![Image](https://github.com/user-attachments/assets/572163c6-0c04-4ff6-894a-9fa3131d4497)
+![Image](https://github.com/user-attachments/assets/be26133b-4891-4a82-b06a-fe505d93df76)
+
+## cookies
+![Image](https://github.com/user-attachments/assets/fb86485f-3fae-49cb-a56f-123a54719412)
+
+## How it work see
+
+![Image](https://github.com/user-attachments/assets/2e46a393-e900-4868-8ff5-7ef7de6358bb)
 
 # Step->3 Creating a middleware folder
 ## need of middleware
