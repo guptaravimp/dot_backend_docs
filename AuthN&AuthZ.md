@@ -376,9 +376,14 @@ https://github.com/guptaravimp/dot_backend_docs/blob/main/login_logic.md
 
 ![Image](https://github.com/user-attachments/assets/2e46a393-e900-4868-8ff5-7ef7de6358bb)
 
+# see the testing till now 
+/////docs of testing 
+
 # Step->3 Creating a middleware folder
 ## need of middleware
-/// docs
+
+![Image](https://github.com/user-attachments/assets/939c4f57-3feb-4451-8f5d-6e05f003c352)
+
 ## auth.js
 ### this folder is used to create a middleware for authentication and authorization
 ### lets create a auth login, isStudentlogic, isAdmin logic 
@@ -470,7 +475,7 @@ exports.isAdmin=(req,res,next)=>{
 }
 ```
 ## See the complete logic of this code here 
-//// readme file of auth, isStudent, admin logic here
+https://github.com/guptaravimp/dot_backend_docs/blob/main/auth_middleware.md
 
 # Step 4-> Now add this middleware where we need this 
 ### I mean lets use in during login and signup 
@@ -517,7 +522,8 @@ module.exports=router;
 ### as you see here when student want to go on his dashboard first their authorzation takje place, next() is isStudent logic then go to student dashboard and same for admin 
 ### first authorization of user take place and then check isAdmin if yes then go to res
 ### see the flow
-/// diagram of how middleware works
+![Image](https://github.com/user-attachments/assets/c2a17893-27ea-4a11-81ce-3a968a40ecfe)
+
 
 # step-5 why we send a id in payload if you see in the controller 
 ## reason of this because using this we can access all the detail through id in payload like user information and photo etc see this 
