@@ -584,3 +584,5 @@ module.exports=router;
 ```
 ### as previous file we see that inside payload we have id inside (req.user) we access the payload because using this we decrypt the jwt token and access the payload 
 
+
+![Image](https://github.com/user-attachments/assets/1d36651e-a866-442b-bb31-9b5535d63db6)
