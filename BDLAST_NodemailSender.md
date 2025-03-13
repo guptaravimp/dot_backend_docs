@@ -12,15 +12,13 @@ MAIL_HOST=smtp.gmail.com
 MAIL_USER=guptaravii263@gmail.com
 MAIL_PASS=your app pass of 16 character
 ```
-
-## 3-> go to your model folder file 
-## add your post middleware before export your model
+## 3-> now create a folder Named utils and inside this create a file lets name mailSender.js
 ```
-fileSchema.post("save",async function(doc){
-    // doc is entry created in db 
+const { default: mongoose } = require("mongoose")
+const nodemailer=require("nodemailer")
+
+const mailSender=async (email,title,body)=>{
     try{
-        console.log("DOC:",doc);
-        // transporter
         let transpoter=nodemailer.createTransport({
             host: process.env.MAIL_HOST,
             auth:{
@@ -28,70 +26,85 @@ fileSchema.post("save",async function(doc){
                 pass: process.env.MAIL_PASS,
             }
         })
-        /// send mail
+
+        // send email
         let info=await transpoter.sendMail({
-            from:`CodeHelp-By ravi`,
-            to:doc.email,
-            subject:" new file uploaded  on cloudinary",
-            html:`<h2>Hello Jee</h2>`
+            from:`devcode-By ravi`,
+            to:`${email}`,
+            subject:`${title}`,
+            html:`${body}`,
         })
-      console.log("Info:",info);
+        console.log(info);
+        return info;
     }catch(error){
-       console.log(error)
+       console.log(error.message)
     }
+}
+
+
+module.exports=mailSender;
+```
+## 3-> go to your model folder file and embed this file before export the model 
+## add your file and  middleware before export your model
+```
+const nodemailer = require("nodemailer")
+/// embed the mailsender function file 
+async function sendvarificationEmail(email,otp){
+    try{
+       const mailResponse=await mailSender(email,"Verification Email From devcode",otp);
+       console.log("email send successfully",mailResponse)
+    }catch(error){
+        console.log("error occured while sending mailserver",error);
+        throw error;
+    }
+}
+
+otpSchema.pre("save",async function(next){
+    await sendvarificationEmail(this.email,this.otp);
+    next();
 })
 
 ```
 
 ## Your model file look like this 
 ````
-const mongoose=require("mongoose")
-const nodemailer = require("nodemailer");
-const fileSchema=new mongoose.Schema({
-    name:{
-        type:String,
-        required:true
-    },
-    imageUrl:{
-        type:String,
-    },
-    tags:{
-        type:String,
-    },
+const mongoose=require("mongoose");
+const mailSender = require("../utils/mailSender");
+
+const otpSchema=new mongoose.Schema({
     email:{
         type:String,
-    }
-});
-
-fileSchema.post("save",async function(doc){
-    // doc is entry created in db 
-    try{
-        console.log("DOC:",doc);
-        // transporter
-        let transpoter=nodemailer.createTransport({
-            host: process.env.MAIL_HOST,
-            auth:{
-                user: process.env.MAIL_USER,
-                pass: process.env.MAIL_PASS,
-            }
-        })
-        /// send mail
-        let info=await transpoter.sendMail({
-            from:`CodeHelp-By ravi`,
-            to:doc.email,
-            subject:" new file uploaded  on cloudinary",
-            html:`<h2>Hello Jee</h2>`
-        })
-      console.log("Info:",info);
-    }catch(error){
-       console.log(error)
+        required:true,
+    },
+    otp:{
+        type: String,
+        required:true,
+    },
+    createdAt:{
+        type: Date,
+        default:Date.now(),
+        expires:5*60,
     }
 })
 
+/// embed the mailsender function file 
+async function sendvarificationEmail(email,otp){
+    try{
+       const mailResponse=await mailSender(email,"Verification Email From devcode",otp);
+       console.log("email send successfully",mailResponse)
+    }catch(error){
+        console.log("error occured while sending mailserver",error);
+        throw error;
+    }
+}
+
+otpSchema.pre("save",async function(next){
+    await sendvarificationEmail(this.email,this.otp);
+    next();
+})
 
 
-const File=mongoose.model("File",fileSchema)
-module.exports=File;
+module.exports=mongoose.model("OTP",otpSchema)
 ````
 
 # Now you can go and do  testing 
