@@ -7,6 +7,14 @@ https://razorpay.com/docs/payments/orders/
 
 https://razorpay.com/docs/payments/optimizer/capture-refund-settings/
 
+## Documentation Notes 
+
+![Image](https://github.com/user-attachments/assets/d6311836-edc8-423b-b1f5-e4a485a92a2d)
+![Image](https://github.com/user-attachments/assets/fdbcde5f-9948-442f-b049-fbfb36de0b2f)
+![Image](https://github.com/user-attachments/assets/1fe40b24-9546-4fdb-a098-acb94277e6af)
+![Image](https://github.com/user-attachments/assets/a71c617c-db7e-4e3f-b6a6-0e50383c1b0d)
+![Image](https://github.com/user-attachments/assets/027d540e-cead-44a4-a108-f1369b2bcea3)
+
 
 # 1-> Install setup razorpay 
 https://razorpay.com/docs/payments/server-integration/nodejs/
