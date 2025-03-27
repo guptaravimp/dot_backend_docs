@@ -25,6 +25,10 @@ exports.cloudinaryConnect=()=>{
     }
 }
 ```
+## first install file upload 
+```
+npm i express-fileupload
+```
 ## 3-> now connect it or say mount in (index.js)
 ```
 const fileupload=require("express-fileupload")
