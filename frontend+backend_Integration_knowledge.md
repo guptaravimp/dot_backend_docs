@@ -11,11 +11,11 @@ npm install cors
 ```
 const cors = require('cors');
 ```
-## tsep3-> now add express(cors) middleware in index.js
-## Why Do We Use This CORS Middleware in Express?
+## step3-> now add express(cors) middleware in index.js
+### Why Do We Use This CORS Middleware in Express?
 ### -> By default, browsers block cross-origin requests due to the Same-Origin Policy. This means that if your frontend (http://localhost:3000) tries to access your backend API (http://localhost:4000), the browser will block the request.
 ### To allow the frontend to communicate with the backend, we use CORS middleware in server.js
-## so add this middleware in index.js in backend
+### so add this middleware in index.js in backend
 ```
 app.use(
     cors({
