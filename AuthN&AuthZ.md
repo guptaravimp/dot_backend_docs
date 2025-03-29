@@ -2,7 +2,7 @@
 # LogIn and Signup in Backend development using (express+MongoDb+node.js)
 # Step-1 Setup Backend application project
 # 1. Initialize the Project
-## Create a new directory for your project:
+## Create a new directory for your project: 
 ```
 mkdir backend-project
 cd backend-project
