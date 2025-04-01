@@ -11,6 +11,12 @@ npm install concurrently
 ## step-5> check the dependencied in package.json that it install or not 
 ## step6-> paste the below code inside the package.json->  scripts
 ```
-"server": "cd server && npm run dev",
-"dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+ "scripts": {
+    "start": "vite dev", 
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+  },
 ```
