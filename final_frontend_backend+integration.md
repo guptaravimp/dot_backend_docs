@@ -43,3 +43,5 @@ npm run dev
 ## Now your project frontend and backend is running simultaniously  
 ### check frontend routes (usually 3000 port)
 ### check backend routes port (usually 4000 port)
+
+## now we added data+assets and tailwind.config.js file 
