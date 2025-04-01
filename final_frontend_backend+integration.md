@@ -20,3 +20,17 @@ npm install concurrently
     "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
   },
 ```
+## step7-> Now you can change the port of frontend goto -> vite.config.js-> add serverb port 
+```
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3001, // Change to your desired port number
+  },
+})
+
+```
