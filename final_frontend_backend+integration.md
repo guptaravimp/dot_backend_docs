@@ -1,8 +1,7 @@
 # this tutorial know us hoe we can connect or frontend and backend 
 ## step->1 make changes in backend that is required see the below url 
-
-
-## step2-> now create a frontend folder lets name with frontend 
+https://github.com/guptaravimp/dot_backend_docs/blob/main/frontend%2Bbackend_Integration_knowledge.md
+## step2-> now create a frontend folder lets name with frontend (devcode)
 ## step3-> now paste the backend folder inside this frontend project folder 
 ## step 4 Now install concurrently dependencies inside the frontend open folder 
 ```
@@ -41,7 +40,7 @@ npm run dev
 ```
 
 ## Now your project frontend and backend is running simultaniously  
-### check frontend routes (usually 3000 port)
+### check frontend routes (usually 3000 port) But check your frontend routes in all file above mentioned 
 ### check backend routes port (usually 4000 port)
 
 ## now we added data+assets and tailwind.config.js file 
